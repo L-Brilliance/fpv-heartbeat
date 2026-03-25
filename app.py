@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-from heartbeat import DroneHeartbeat
+from HEARTBEAT import DroneHeartbeat
 
 st.title("无人机通信心跳监测可视化")
 
