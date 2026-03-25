@@ -37,3 +37,4 @@ if st.session_state.get("running", False):
     st.session_state.data = st.session_state.drone.get_dataframe()
     time.sleep(1)  # 短暂延迟后自动重跑
     st.rerun()  # 安全触发页面刷新
+
