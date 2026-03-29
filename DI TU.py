@@ -28,7 +28,7 @@ m = LeafletMap(center=map_center, zoom=18)
 # 标记起点A
 m.add_marker(location=[lat_a, lon_a], popup="起点A", icon="red")
 # 标记终点B
-m m.add_marker(location=[lat_b, lon_b], popup="终点B", icon="green")
+m.add_marker(location=[lat_b, lon_b], popup="终点B", icon="green")
 # 绘制AB连线
 m.add_polyline(locations=[[lat_a, lon_a], [lat_b, lon_b]], color="blue", weight=3)
 
