@@ -72,15 +72,15 @@ polygon = Polygon([
          return False, None
  # ---------------------- Streamlit 主界面逻辑 ----------------------
  # 初始化会话状态
- if "drone" not in st.session_state:
+if "drone" not in st.session_state:
      st.session_state.drone = DroneHeartbeat()
- if "is_running" not in st.session_state:
+if "is_running" not in st.session_state:
      st.session_state.is_running = False
- if "map_planner" not in st.session_state:
+if "map_planner" not in st.session_state:
      st.session_state.map_planner = MapPlanner()
- if "point_a" not in st.session_state:
+if "point_a" not in st.session_state:
      st.session_state.point_a = {"lat": 32.2322, "lon": 118.749}  # 初始A点
- if "point_b" not in st.session_state:
+if "point_b" not in st.session_state:
      st.session_state.point_b = {"lat": 32.2343, "lon": 118.749}  # 初始B点
  t.title("🚁 无人机通信心跳监测+路径规划可视化")
  st.subheader("实时监控+3D地图AB点规划+障碍物标注")
@@ -107,7 +107,7 @@ polygon = Polygon([
      st.info(f"当前飞行高度：{fly_height}m")
      # 3. 心跳控制按钮
      st.subheader("心跳监测")
-  if st.button("▶️ 开始监测", type="primary"):
+ if st.button("▶️ 开始监测", type="primary"):
              st.session_state.is_running = True
              st.rerun()
      else:
@@ -124,7 +124,7 @@ polygon = Polygon([
      if st.button("清除所有障碍物"):
          st.session_state.map_planner.obstacles = []
          st.success("障碍物已清除！")
- with col2:
+with col2:
      st.subheader("🗺️ 3D/2D 地图视图")
      # 初始化地图（初始中心：学校近似中心，缩放级别18）
      m = LeafletMap(
